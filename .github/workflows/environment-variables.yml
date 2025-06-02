@@ -12,6 +12,7 @@ jobs:
         env:
           STEP_ENVIRONMENT_VARIABLE: 'custom step environment variable for bash'
         run: |
+          echo "${{env.FILE_NAME}}"
           echo "Accessing environment variables in run command"
           echo "$WORKSPACE_ENVIRONMENT_VARIABLE"
           echo "$JOB_ENVIRONMENT_VARIABLE"
